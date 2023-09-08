@@ -1,0 +1,133 @@
+.loginpage-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/****************************************************************/
+.loginpage-upper-container {
+    margin-bottom: 1rem;
+    * {
+        text-align: center;
+    }
+    h2 {
+        color: #0066f4;
+        font-weight: 800;
+        font-size: 2.2rem;
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+    span {
+        font-size: 0.9rem;
+    }
+}
+/*************************************************************/
+.loginpage-form-container {
+    width: 33%;
+    height: auto;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.loginpage-inner-form-container {
+    width: 80%;
+    height: auto;
+    padding: 1rem;
+}
+.loginpage-input-outer-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+}
+.loginpage-input-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 2.4rem;
+    margin-top: 0.5rem;
+    input {
+        width: 100%;
+        height: 100%;
+        border: 0.5px solid #bcbcbc;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        padding-left: 1rem;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+.loginpage-password-input {
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid #bcbcbc;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+.loginpage-password-icon {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+.loginpage-password-input:focus + .loginpage-password-icon {
+    display: none;
+}
+
+.loginpage-mail-input {
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid #bcbcbc;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+.loginpage-mail-icon {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+.loginpage-mail-input:focus + .loginpage-mail-icon {
+    display: none;
+}
+
+/************************************************************************/
+.loginpage-forget-pass {
+    margin-top: 1rem;
+    color: #0066f4;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+.loginpage-login-button {
+    width: 100%;
+    height: 3rem;
+    background-color: #0066f4;
+    border-radius: 8px;
+    margin-top: 1.2rem;
+    text-align: center;
+    border: 0;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+        background-color: white;
+        border: 1px solid #0066f4;
+        transition: 0.5s;
+        color: #0066f4;
+    }
+}
+.loginpage-bottom-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 1rem;
+}
