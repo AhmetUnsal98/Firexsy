@@ -1,0 +1,23 @@
+.costumer-table-upper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.costumer-table-add-new-costumer-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #0066f4;
+    border: 0px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    * {
+        margin: 0.1rem;
+    }
+    span {
+        margin-left: 0.4rem;
+    }
+}

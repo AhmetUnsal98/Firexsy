@@ -8,7 +8,7 @@ import {
   PointElement,
 } from "chart.js";
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
-const TableCount = () => {
+const GraphCount = () => {
   const [data, setData] = useState({
     labels: [
       "Ocak",
@@ -36,10 +36,10 @@ const TableCount = () => {
   });
 
   return (
-    <div style={{ width: "45%", height: "95%" }}>
+    <div style={{ width: "45%", height: "100%", marginTop: "1.2rem" }}>
       <Line data={data} />
     </div>
   );
 };
 
-export default TableCount;
+export default GraphCount;

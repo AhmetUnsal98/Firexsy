@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import "./mainlayout.scss";
 import { BiSolidDashboard } from "react-icons/bi";
 import { BiCabinet } from "react-icons/bi";
@@ -12,11 +13,14 @@ import { IoPersonOutline } from "react-icons/io5";
 import { FaFireExtinguisher } from "react-icons/fa";
 import logo from "../assets/logo.png";
 const MainLayout = ({ children }) => {
+  const location = useLocation();
+  //Spiliting after slash and take category pathname to cat variable
+  const url = location.pathname.split("/")[1];
+
   return (
     <div className="mainlayout">
       <div className="mainlayout-left-side">
         <div className="mainlayout-left-side-head">
-          {" "}
           <h3>firexsy</h3>
           <div style={{ marginTop: "0.7rem" }}>
             <span>4 gün kaldı</span>
@@ -25,22 +29,49 @@ const MainLayout = ({ children }) => {
         </div>
 
         <div className="mainlayout-left-side-menu">
-          <div className="mainlayout-menu-item">
-            <BiSolidDashboard size={20} color="gray" />
-            <span>Dashboard</span>
-          </div>
-          <div className="mainlayout-menu-item">
-            <IoPeopleSharp size={20} color="gray" />
-            <span>Müşteriler</span>
-          </div>
-          <div className="mainlayout-menu-item">
-            <FaFireExtinguisher size={20} color="gray" />
-            <span>Yangın Söndürme Cihazı İşlemleri</span>
-          </div>
+          <a href="/dashboard">
+            <div
+              className={
+                url === "dashboard"
+                  ? "mainlayout-menu-item-active"
+                  : "mainlayout-menu-item"
+              }
+            >
+              <BiSolidDashboard size={20} color="gray" />
+              <span>Dashboard</span>
+            </div>
+          </a>
+          <a href="/costumers">
+            <div
+              className={
+                url === "costumers"
+                  ? "mainlayout-menu-item-active"
+                  : "mainlayout-menu-item"
+              }
+            >
+              <IoPeopleSharp size={20} color="gray" />
+              <span>Müşteriler</span>
+            </div>
+          </a>
+
+          <a href="/ysc">
+            <div
+              className={
+                url === "ysc"
+                  ? "mainlayout-menu-item-active"
+                  : "mainlayout-menu-item"
+              }
+            >
+              <FaFireExtinguisher size={20} color="gray" />
+              <span>Yangın Söndürme Cihazı İşlemleri</span>
+            </div>
+          </a>
+
           <div className="mainlayout-menu-item">
             <BiCabinet size={20} color="gray" />
             <span>Yangın Dolabı İşlemleri</span>
           </div>
+
           <div className="mainlayout-menu-item">
             <BiSolidReport size={20} color="gray" />
             <span>Raporlar</span>
@@ -75,8 +106,10 @@ const MainLayout = ({ children }) => {
               margin: "0.4rem",
             }}
           >
-            <BiLogOut size={20} color="white" />
-            <span style={{ marginLeft: "0.4rem" }}>Çıkış Yap</span>
+            <BiLogOut size={20} color="#FF265A" />
+            <span style={{ marginLeft: "0.4rem", color: "#FF265A" }}>
+              Çıkış Yap
+            </span>
           </div>
         </div>
       </div>
@@ -87,7 +120,9 @@ const MainLayout = ({ children }) => {
           </div>
           <div className="mainlayout-upper-container-user">
             <div className="mainlayout-upper-container-user-title">
-              <span>Jhon Doe</span>
+              <span>
+                Jhon<b>Doe</b>
+              </span>
               <BiChevronDown size={15} color="gray" />
             </div>
             <IoPersonOutline size={20} color="gray" />

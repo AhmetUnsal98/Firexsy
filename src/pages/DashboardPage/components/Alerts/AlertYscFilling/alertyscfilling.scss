@@ -1,0 +1,45 @@
+.alert-ysc-filling-container {
+    flex: 1;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.75rem;
+    justify-content: space-around;
+    border-right: 4px solid #0066f4;
+    transition: 0.7s;
+    cursor: pointer;
+    margin-top: 0.8rem;
+
+    .ysc-filling-text {
+        color: #0066f4;
+        font-size: 0.7rem;
+    }
+    .ysc-filling-number {
+        color: #0066f4;
+        font-size: 0.7rem;
+    }
+}
+.alert-ysc-filling-container-active {
+    flex: 1;
+    height: 100%;
+    background-color: #0066f4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.75rem;
+    justify-content: space-around;
+    transition: 0.7s;
+    margin-top: 0.8rem;
+
+    cursor: pointer;
+    .ysc-filling-text {
+        color: white;
+        font-size: 0.7rem;
+    }
+    .ysc-filling-number {
+        color: #0066f4;
+        font-size: 0.7rem;
+    }
+}

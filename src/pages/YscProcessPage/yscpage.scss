@@ -1,0 +1,110 @@
+.ysc-page-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ysc-page-inner-container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    H3 {
+        font-weight: 550;
+    }
+}
+.ysc-page-upper-container {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    button {
+        width: 12%;
+        height: 2rem;
+        background-color: #0066f4;
+        border: 0px;
+        color: white;
+        border-radius: 3rem;
+        cursor: pointer;
+    }
+}
+.ysc-page-input-row {
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    height: auto;
+    min-height: 5vh;
+}
+.ysc-page-input-row-left {
+    display: flex;
+    flex: 4;
+    align-items: center;
+    span {
+        font-size: 0.7rem;
+        color: black;
+        font-weight: 550;
+    }
+}
+.ysc-page-input-row-right {
+    display: flex;
+    flex: 14;
+    select,
+    input {
+        border-radius: 4px;
+        width: 100%;
+        border: 1px solid #d2d2d2;
+        padding-left: 1rem;
+    }
+}
+.ysc-page-process-container {
+    width: 100%;
+    background-color: red;
+    height: auto;
+    background-color: white;
+    border-radius: 9px;
+    margin-top: 2rem;
+}
+.ysc-page-process-upper-container {
+    width: 100%;
+    height: 12vh;
+    background-color: #0066f4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.ysc-page-hareketler-upper {
+    width: 100%;
+    height: 12vh;
+    background-color: #0066f4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+.ysc-page-hareketler-upper-bar {
+    flex: 1;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    span {
+        color: #0066f4;
+    }
+}
+
+.ysc-page-hareketler-upper-bar-active {
+    flex: 1;
+    height: 100%;
+    background-color: #0066f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        color: white;
+    }
+}

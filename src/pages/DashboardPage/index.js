@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import MainLayout from "../../layouts";
 import "./dashboard.scss";
 import TotalCostumersCard from "./components/Cards/TotalCostumersCard";
 import TotalYscCard from "./components/Cards/TotalYscCard";
 import TotalYsdCard from "./components/Cards/TotalYsdCard";
-import TableCount from "./components/TableCount";
-import TableKilogram from "./components/TableKilogram";
+import GraphCount from "./components/GraphCount";
+import GraphKilogram from "./components/GraphKilogram";
+import AlertYscFilling from "./components/Alerts/AlertYscFilling";
+import AlertYscMaintanance from "./components/Alerts/AlertYscMaintanance";
+import AlertYsdMaintanance from "./components/Alerts/AlertYsdMaintanance";
+import YscMaintananceTable from "./components/DashboardTables/YscMaintananceTable";
+import YscFillingTable from "./components/DashboardTables/YscFillingTable";
+import YsdMaintananceTable from "./components/DashboardTables/YsdMaintananceTable";
 const DashboardPage = () => {
+  const [table, setTable] = useState("yscmaintanance");
+  const pull_data = (data) => {
+    setTable(data);
+  };
+
   return (
     <MainLayout>
       <div className="dashboard-container">
@@ -22,9 +33,19 @@ const DashboardPage = () => {
               dolum miktarı
             </span>
             <div className="dashboard-upper-container-right-side-tables-container">
-              <TableCount /> <TableKilogram />
+              <GraphCount /> <GraphKilogram />
             </div>
           </div>
+        </div>
+        <div className="dashboard-middle-container">
+          <AlertYscMaintanance func={pull_data} bg={table} />
+          <AlertYscFilling func={pull_data} bg={table} />
+          <AlertYsdMaintanance func={pull_data} bg={table} />
+        </div>
+        <div className="dashboard-bottom-container">
+          {table === "yscmaintanance" && <YscMaintananceTable />}
+          {table === "yscfilling" && <YscFillingTable />}
+          {table === "ysdmaintanance" && <YsdMaintananceTable />}
         </div>
       </div>
     </MainLayout>
