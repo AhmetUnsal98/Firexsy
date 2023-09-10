@@ -11,38 +11,35 @@ const LoginPage = () => {
       </div>
       <div className="loginpage-form-container">
         <div className="loginpage-inner-form-container">
-          <div className="loginpage-input-outer-container">
+          <div className="registerpage-outer-input">
             <span>Email</span>
-            <div className="loginpage-input-container">
-              <input className="loginpage-mail-input"></input>{" "}
+            <div className="registerpage-input-container">
               <AiOutlineMail
-                size={25}
+                style={{ marginLeft: "0.4rem" }}
+                size={20}
                 color="gray"
-                className="loginpage-mail-icon"
               />
+              <input></input>
             </div>
           </div>
-          <div
-            style={{ marginTop: "1rem" }}
-            className="loginpage-input-outer-container"
-          >
+          <div className="registerpage-outer-input">
             <span>Şifre</span>
-            <div className="loginpage-input-container">
-              <input
-                className="loginpage-password-input"
-                type="password"
-              ></input>
+            <div className="registerpage-input-container">
               <PiPasswordBold
-                size={25}
+                style={{ marginLeft: "0.4rem" }}
+                size={20}
                 color="gray"
-                className="loginpage-password-icon"
               />
+              <input type="password"></input>
             </div>
           </div>
           <p className="loginpage-forget-pass">Şifremi unuttum ?</p>
-          <button className="loginpage-login-button">
-            <span>Giriş Yap</span>
-          </button>
+          <a href="/dashboard">
+            {" "}
+            <button className="loginpage-login-button">
+              <span>Giriş Yap</span>
+            </button>{" "}
+          </a>
         </div>
       </div>
       <div className="loginpage-bottom-container">

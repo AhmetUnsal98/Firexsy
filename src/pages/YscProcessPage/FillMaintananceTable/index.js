@@ -144,6 +144,8 @@ function FillMaintananceTable() {
         <div className="ysc-table-operations-container">
           <select className="ysc-table-add-new-costumer-select">
             <option>İşlemler</option>
+            <option>Tümünü Sil</option>
+            <option>Seçilenleri Sil</option>
           </select>
         </div>
       </div>

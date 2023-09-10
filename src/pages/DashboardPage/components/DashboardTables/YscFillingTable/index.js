@@ -65,6 +65,7 @@ const YscFillingTable = () => {
         }}
       />
       <Table
+        size="small"
         columns={columns}
         dataSource={dataSourceYscFilling}
         pagination={{

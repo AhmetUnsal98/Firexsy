@@ -125,12 +125,12 @@ const CostumersTable = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="education"
         columns={columns}
         dataSource={dataSourceCostumers}
         pagination={{
           pageSize: 6,
         }}
+        size="small"
       />
     </motion.div>
   );

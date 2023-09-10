@@ -73,6 +73,7 @@ const YsdMaintananceTable = () => {
         className="education"
         columns={columns}
         dataSource={dataSourceYsdMaintanance}
+        size="small"
         pagination={{
           pageSize: 6,
         }}

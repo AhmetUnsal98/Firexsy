@@ -151,7 +151,7 @@ function YscTable() {
     <div className="ysc-table-container">
       <div className="ysc-table-upper">
         <Input.Search
-          style={{ width: "20%", marginBottom: "0.5rem" }}
+          style={{ width: "20%", marginBottom: "0.5rem", marginLeft: "1rem" }}
           placeholder="Search here..."
           onChange={(e) => {
             setSearchedText(e.target.value);
@@ -164,6 +164,14 @@ function YscTable() {
           </button>
           <select className="ysc-table-add-new-costumer-select">
             <option>İşlemler</option>
+            <option>Tümünü Sil</option>
+            <option>Seçilenleri Sil</option>
+            <option>Tümünü Bakım Yapılacaklara Aktar</option>
+            <option>Tümünü Dolum Yapılacaklar Listesine Aktar</option>
+            <option>Seçilenlerin Bakım Yapılacaklar Listesine Aktar</option>
+            <option>
+              Seçilelerin Tümünü Dolum Yapılacaklar Listesine Aktar
+            </option>
           </select>
         </div>
       </div>

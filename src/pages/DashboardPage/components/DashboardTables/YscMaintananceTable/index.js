@@ -65,6 +65,7 @@ const YscMaintananceTable = () => {
         }}
       />
       <Table
+        size="small"
         columns={columns}
         dataSource={dataSourceYscMaintanance}
         pagination={{
