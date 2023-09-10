@@ -6,7 +6,7 @@
     align-items: center;
 }
 .ysc-page-inner-container {
-    width: 90%;
+    width: 95%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -70,10 +70,59 @@
 .ysc-page-process-upper-container {
     width: 100%;
     height: 12vh;
-    background-color: #0066f4;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    span {
+        font-size: 0.7rem;
+        text-align: center;
+        color: #343434;
+    }
 }
+.ysc-page-upper-container-cell {
+    flex: 1;
+    height: 100%;
+    background-color: white;
+    border: 1px solid #0066f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+.cell-number-circle {
+    position: absolute;
+    width: 17%;
+    height: 36%;
+    border-radius: 50%;
+    top: -18%;
+    background-color: white;
+    border: 1px solid #0066f4;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 550;
+    color: #0066f4;
+}
+.ysc-page-upper-container-cell-active {
+    flex: 1;
+    height: 100%;
+    background-color: #0066f4;
+    border: 1px solid #0066f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    span {
+        font-size: 0.7rem;
+        text-align: center;
+        color: white;
+    }
+}
+
 .ysc-page-hareketler-upper {
     width: 100%;
     height: 12vh;
@@ -107,4 +156,50 @@
     span {
         color: white;
     }
+}
+.ysc-table-upper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+.ysc-table-add-new-costumer-select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #0066f4;
+    border-radius: 20px;
+    color: #0066f4;
+    cursor: pointer;
+    width: 15%;
+    height: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+.ysc-table-add-new-costumer-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #0066f4;
+    border: 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 15%;
+    height: 2rem;
+    justify-content: center;
+    text-align: center;
+    margin-right: 1rem;
+    span {
+        color: white;
+        font-size: 0.65rem;
+        margin-left: 0.4rem;
+    }
+}
+.ysc-table-operations-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
 }

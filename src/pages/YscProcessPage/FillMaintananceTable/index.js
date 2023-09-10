@@ -1,17 +1,16 @@
 import { Button, Table, Form, Input } from "antd";
 import { useEffect, useState } from "react";
-import { dataSourceYsc } from "../../../dummyData";
+import { dataSourceFillingMaintanance } from "../../../dummyData";
 import { AiFillEdit, AiFillEye } from "react-icons/ai";
 import { BsFillPersonPlusFill } from "react-icons/bs";
-import "./ysctable.scss";
-function YscTable() {
+function FillMaintananceTable() {
   const [dataSource, setDataSource] = useState([]);
   const [editingRow, setEditingRow] = useState(null);
   const [searchedText, setSearchedText] = useState("");
   const [form] = Form.useForm();
 
   useEffect(() => {
-    const data = dataSourceYsc;
+    const data = dataSourceFillingMaintanance;
     setDataSource(data);
   }, []);
   const columns = [
@@ -20,8 +19,8 @@ function YscTable() {
       dataIndex: "key",
     },
     {
-      title: "Seri No",
-      dataIndex: "serino",
+      title: "İşlem No",
+      dataIndex: "islemNo",
       onFilter: (value, record) => {
         return (
           String(record.costumer).toLowerCase().includes(value.toLowerCase()) ||
@@ -44,8 +43,8 @@ function YscTable() {
       },
     },
     {
-      title: "Cinsi",
-      dataIndex: "cinsi",
+      title: "İşlem Tarihi",
+      dataIndex: "islemTarihi",
       render: (text, record) => {
         if (editingRow === record.key) {
           return (
@@ -59,8 +58,8 @@ function YscTable() {
       },
     },
     {
-      title: "Bulunduğu Yer",
-      dataIndex: "yer",
+      title: "İşlem Türü",
+      dataIndex: "islemTuru",
       render: (text, record) => {
         if (editingRow === record.key) {
           return (
@@ -74,27 +73,12 @@ function YscTable() {
       },
     },
     {
-      title: "Son Bakim Tarihi",
-      dataIndex: "sonbakim",
+      title: "İşlem Yapılan Cihaz Sayısı",
+      dataIndex: "islemsayisi",
       render: (text, record) => {
         if (editingRow === record.key) {
           return (
             <Form.Item name="sonbakim">
-              <Input />
-            </Form.Item>
-          );
-        } else {
-          return <p>{text}</p>;
-        }
-      },
-    },
-    {
-      title: "Sonraki Bakim Tarihi",
-      dataIndex: "sonrakibakim",
-      render: (text, record) => {
-        if (editingRow === record.key) {
-          return (
-            <Form.Item name="sonrakibakim">
               <Input />
             </Form.Item>
           );
@@ -158,10 +142,6 @@ function YscTable() {
           }}
         />
         <div className="ysc-table-operations-container">
-          <button className="ysc-table-add-new-costumer-button">
-            <BsFillPersonPlusFill size={15} color="white" />
-            <span>Yeni Müşteri Ekle</span>
-          </button>
           <select className="ysc-table-add-new-costumer-select">
             <option>İşlemler</option>
           </select>
@@ -179,4 +159,4 @@ function YscTable() {
   );
 }
 
-export default YscTable;
+export default FillMaintananceTable;

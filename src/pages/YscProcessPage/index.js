@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import MainLayout from "../../layouts";
 import "./yscpage.scss";
 import YscTable from "./YscTable";
+import FillMaintananceTable from "./FillMaintananceTable";
 const YscProcessPage = () => {
   const [hareket, setHareket] = useState("hareket-fill");
+  const [process, setProcess] = useState("");
   const handleHareket = (e) => {
     setHareket(e);
   };
@@ -39,7 +41,39 @@ const YscProcessPage = () => {
             <button>Uygula</button>
           </div>
           <div className="ysc-page-process-container">
-            <div className="ysc-page-process-upper-container"></div>
+            <div className="ysc-page-process-upper-container">
+              <div
+                style={{ borderTopLeftRadius: "12px" }}
+                className="ysc-page-upper-container-cell-active"
+              >
+                <span>Cihaz Listesi</span>
+                <div className="cell-number-circle">6</div>
+              </div>
+              <div className="ysc-page-upper-container-cell">
+                {" "}
+                <span>Bakımı Yapılacak Cihazlar</span>
+                <div className="cell-number-circle">0</div>
+              </div>
+              <div className="ysc-page-upper-container-cell">
+                <span>Dolumu Yapılacak Cihazlar</span>
+                <div className="cell-number-circle">0</div>
+              </div>
+              <div className="ysc-page-upper-container-cell">
+                <span>Depoya Gönderilecekler</span>
+                <div className="cell-number-circle">0</div>
+              </div>
+              <div className="ysc-page-upper-container-cell">
+                <span>Depodakiler</span>
+                <div className="cell-number-circle">0</div>
+              </div>
+              <div
+                style={{ borderTopRightRadius: "12px" }}
+                className="ysc-page-upper-container-cell"
+              >
+                <span>Fatura Onayı Bekleyenler</span>
+                <div className="cell-number-circle">0</div>
+              </div>
+            </div>
             <YscTable />
           </div>
 
@@ -71,7 +105,7 @@ const YscProcessPage = () => {
               <span>Depo Hareketleri</span>
             </div>
           </div>
-          <YscTable />
+          <FillMaintananceTable />
         </div>
       </div>
     </MainLayout>
