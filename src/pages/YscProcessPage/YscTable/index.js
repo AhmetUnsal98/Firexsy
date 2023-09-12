@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { dataSourceYsc } from "../../../dummyData";
 import { AiFillEdit, AiFillEye } from "react-icons/ai";
 import { BsFillPersonPlusFill } from "react-icons/bs";
+import { VscRunAll } from "react-icons/vsc";
+
 import "./ysctable.scss";
 function YscTable() {
   const [dataSource, setDataSource] = useState([]);
@@ -104,7 +106,7 @@ function YscTable() {
       },
     },
     {
-      title: "Actions",
+      title: "İşlemler",
       render: (_, record) => {
         return (
           <>
@@ -143,7 +145,7 @@ function YscTable() {
   const onFinish = (values) => {
     console.log(values);
     const updatedDataSource = [...dataSource];
-    updatedDataSource.splice(editingRow, 1, { ...values, key: editingRow });
+    updatedDataSource.splice(editingRow - 1, 1, { ...values, key: editingRow });
     setDataSource(updatedDataSource);
     setEditingRow(null);
   };
@@ -163,7 +165,7 @@ function YscTable() {
             <span>Yeni Müşteri Ekle</span>
           </button>
           <select className="ysc-table-add-new-costumer-select">
-            <option>İşlemler</option>
+            <option>İşlem Seç</option>
             <option>Tümünü Sil</option>
             <option>Seçilenleri Sil</option>
             <option>Tümünü Bakım Yapılacaklara Aktar</option>
@@ -173,6 +175,10 @@ function YscTable() {
               Seçilelerin Tümünü Dolum Yapılacaklar Listesine Aktar
             </option>
           </select>
+          <button className="ysc-table-add-new-costumer-button">
+            <VscRunAll size={15} color="white" />
+            <span>İşlemi Gerçekleştir</span>
+          </button>
         </div>
       </div>
       <Form size="small" form={form} onFinish={onFinish}>

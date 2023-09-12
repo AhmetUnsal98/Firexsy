@@ -26,7 +26,7 @@ const YsdMaintananceTable = () => {
     },
     {
       key: "3",
-      title: "Bakımı Gelmiş YSC Sayısı",
+      title: "Bakımı Gelmiş YSD Sayısı",
       dataIndex: "ysc",
       sorter: (record1, record2) => {
         return record1.ysc > record2.ysc;

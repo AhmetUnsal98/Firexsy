@@ -36,7 +36,7 @@ const GraphCount = () => {
   });
 
   return (
-    <div style={{ width: "45%", height: "100%", marginTop: "1.2rem" }}>
+    <div style={{ width: "48%", height: "100%", marginTop: "1.2rem" }}>
       <Line data={data} />
     </div>
   );

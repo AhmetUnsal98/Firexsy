@@ -1,6 +1,6 @@
 .dashboard-container {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 45vh;
+    height: auto;
     margin-top: 1.2rem;
 }
 .dashboard-upper-container-left-side {
@@ -20,7 +20,7 @@
     align-items: center;
 }
 .dashboard-upper-container-right-side {
-    flex: 6;
+    flex: 7;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -41,11 +41,17 @@
     flex-direction: row;
     width: 96%;
     height: 6vh;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 .dashboard-bottom-container {
     width: 95%;
-    height: 100%;
+    height: auto;
     padding: 1.5rem;
     margin: 2rem;
+}
+.dashboard-storage-bill-container-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70vh;
 }

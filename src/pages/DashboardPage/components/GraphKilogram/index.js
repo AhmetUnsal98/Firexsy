@@ -37,7 +37,7 @@ const GraphKilogram = () => {
   });
 
   return (
-    <div style={{ width: "45%", height: "95%", marginTop: "1.5rem" }}>
+    <div style={{ width: "48%", height: "95%", marginTop: "1.5rem" }}>
       <Bar data={data} />
     </div>
   );

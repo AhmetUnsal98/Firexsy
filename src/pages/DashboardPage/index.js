@@ -47,6 +47,9 @@ const DashboardPage = () => {
           {table === "yscfilling" && <YscFillingTable />}
           {table === "ysdmaintanance" && <YsdMaintananceTable />}
         </div>
+        <div className="dashboard-storage-bill-container-wrapper"></div>
+        <div className="dashboard-storage-table-container"></div>
+        <div className="dashboard-bill-table-container"></div>
       </div>
     </MainLayout>
   );

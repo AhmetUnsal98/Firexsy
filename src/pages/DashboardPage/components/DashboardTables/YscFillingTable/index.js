@@ -26,7 +26,7 @@ const YscFillingTable = () => {
     },
     {
       key: "3",
-      title: "Bakımı Gelmiş YSC Sayısı",
+      title: "Dolumu Gelmiş YSC Sayısı",
       dataIndex: "ysc",
       sorter: (record1, record2) => {
         return record1.ysc > record2.ysc;
