@@ -3,7 +3,6 @@ import "./registerpage.scss";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineCheck } from "react-icons/ai";
 import { AiOutlineUpload } from "react-icons/ai";
-
 import { BsFillBuildingsFill } from "react-icons/bs";
 import { PiPasswordBold } from "react-icons/pi";
 import logo from "../../assets/logo.png";
@@ -102,7 +101,7 @@ const RegisterPage = () => {
           </div>
         </div>
         <div className="registerpage-bottom-container">
-          Hesabınız var mı? <a>Giris Yap</a>
+          Hesabınız var mı? <a href="/login">Giris Yap</a>
         </div>
         <div className="registerpage-alert-container">
           {" "}

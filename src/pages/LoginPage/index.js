@@ -43,7 +43,10 @@ const LoginPage = () => {
         </div>
       </div>
       <div className="loginpage-bottom-container">
-        <span>Hesabınız yok mu?</span>
+        <a href="/register">
+          <span>Hesabınız yok mu?</span>
+        </a>
+
         <span
           style={{
             cursor: "pointer",
