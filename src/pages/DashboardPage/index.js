@@ -12,6 +12,8 @@ import AlertYsdMaintanance from "./components/Alerts/AlertYsdMaintanance";
 import YscMaintananceTable from "./components/DashboardTables/YscMaintananceTable";
 import YscFillingTable from "./components/DashboardTables/YscFillingTable";
 import YsdMaintananceTable from "./components/DashboardTables/YsdMaintananceTable";
+import TotalStorageYSC from "./components/DashboardTables/TotalStorageYSC";
+import BillingYSC from "./components/DashboardTables/BillingYSC";
 const DashboardPage = () => {
   const [table, setTable] = useState("yscmaintanance");
   const pull_data = (data) => {
@@ -47,9 +49,16 @@ const DashboardPage = () => {
           {table === "yscfilling" && <YscFillingTable />}
           {table === "ysdmaintanance" && <YsdMaintananceTable />}
         </div>
-        <div className="dashboard-storage-bill-container-wrapper"></div>
-        <div className="dashboard-storage-table-container"></div>
-        <div className="dashboard-bill-table-container"></div>
+        <div className="dashboard-storage-bill-container-wrapper">
+          <div className="dashboard-storage-table-container">
+            <h5>Depoda Bekleyen Yangın Söndürme Cihazları</h5>
+            <TotalStorageYSC />
+          </div>
+          <div className="dashboard-bill-table-container">
+            <h5>Faturalandırma Bekleyen Yangın Söndürme Cihazları</h5>
+            <BillingYSC />
+          </div>
+        </div>
       </div>
     </MainLayout>
   );

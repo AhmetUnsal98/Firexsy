@@ -32,7 +32,7 @@ const MainLayout = ({ children }) => {
           <a href="/dashboard">
             <div
               className={
-                url === "dashboard" || " "
+                url === "dashboard" || ""
                   ? "mainlayout-menu-item-active"
                   : "mainlayout-menu-item"
               }

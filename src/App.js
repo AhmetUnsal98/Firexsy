@@ -3,7 +3,7 @@ import {
   Routes,
   Route,
   BrowserRouter,
-  Redirect,
+  Navigate,
 } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
@@ -23,7 +23,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />}></Route>
           <Route path="/login" element={<LoginPage />}></Route>
           <Route path="/ysc" element={<YscProcessPage />}></Route>
-          <Route path="/" element={<DashboardPage />}></Route>
+          <Route path="/" element={<Navigate to="/dashboard" />} />
         </Routes>
       </BrowserRouter>
     </div>

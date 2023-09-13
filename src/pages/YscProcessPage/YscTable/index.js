@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { dataSourceYsc } from "../../../dummyData";
 import { AiFillEdit, AiFillEye } from "react-icons/ai";
 import { BsFillPersonPlusFill } from "react-icons/bs";
-import { VscRunAll } from "react-icons/vsc";
 
 import "./ysctable.scss";
 function YscTable() {
@@ -24,6 +23,7 @@ function YscTable() {
     {
       title: "Seri No",
       dataIndex: "serino",
+      filteredValue: [searchedText],
       onFilter: (value, record) => {
         return (
           String(record.costumer).toLowerCase().includes(value.toLowerCase()) ||
@@ -175,10 +175,6 @@ function YscTable() {
               Seçilelerin Tümünü Dolum Yapılacaklar Listesine Aktar
             </option>
           </select>
-          <button className="ysc-table-add-new-costumer-button">
-            <VscRunAll size={15} color="white" />
-            <span>İşlemi Gerçekleştir</span>
-          </button>
         </div>
       </div>
       <Form size="small" form={form} onFinish={onFinish}>
